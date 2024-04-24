@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240424180119">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240424200030">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,15 +40,21 @@
 					</div>
 				</div>
 				<div class="header__right">
-					<form class="form" action="#" method="POST">
+					<form class="form formPC" action="#" method="POST">
 						<div class="form__title">Купить билеты</div>
-						<input type="text" name="form[FIO]" placeholder="Введите ФИО" class="input" />
-						<input type="text" name="form[phone]" placeholder="Введите ваш телефон" class="input" />
-						<input type="text" name="form[place]" placeholder="Выберите место и время" class="input" />
-						<input type="text" name="form[count]" placeholder="Укажите количество" class="input" />
+						<input required type="text" name="form[FIO]" placeholder="Введите ФИО" class="input" />
+						<input required type="text" name="form[phone]" placeholder="Введите ваш телефон" class="input" />
+						<input required type="text" name="form[place]" placeholder="Выберите место и время" class="input" />
+						<input required type="text" name="form[count]" placeholder="Укажите количество" class="input" />
 						<button type="submit" class="button">Оплатить</button>
 					</form>
 				</div>
+				<a href="#formMB" class="header__button">
+					<span>КУПИТЬ<br />БИЛЕТЫ</span>
+					<div class="header__button-img">
+						<img src="img/arrowR.svg" alt="img" />
+					</div>
+				</a>
 			</div>
 		</header>
 
@@ -62,7 +68,7 @@
 		</div>
 		<main class="page">
 			<div class="about__container">
-				<div class="about">
+				<div id="prog" class="about">
 					<h2 class="about__title">Подарите ребенку волшебную сказку</h2>
 					<div class="about__grid">
 						<div class="about__left">
@@ -87,7 +93,19 @@
 					</div>
 				</div>
 			</div>
-			<section class="location">
+			<section id="formMB" class="mobile-form">
+				<div class="mobile-form__container">
+					<form class="form formMB" action="#" method="POST">
+						<div class="form__title">Купить билеты</div>
+						<input type="text" required name="form[FIO]" placeholder="Введите ФИО" class="input" />
+						<input type="text" required name="form[phone]" placeholder="Введите ваш телефон" class="input" />
+						<input type="text" required name="form[place]" placeholder="Выберите место и время" class="input" />
+						<input type="text" required name="form[count]" placeholder="Укажите количество" class="input" />
+						<button type="submit" class="button">Оплатить</button>
+					</form>
+				</div>
+			</section>
+			<section id="adress" class="location">
 				<div class="location__container">
 					<h2 class="location__title">
 						<div class="location__title-text">
@@ -103,8 +121,8 @@
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.7284241852076!2d44.4969067!3d48.7488843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x411aca5739000001%3A0x786d5c84ee83d920!2z0KHQuNC90LXQvNCwIDUg4oCUINCi0KDQmiAi0J_QsNGA0Log0KXQsNGD0YEiINCS0L7Qu9Cz0L7Qs9GA0LDQtA!5e0!3m2!1sru!2sru!4v1713967571438!5m2!1sru!2sru" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
 							<div class="item-location__descr">
-								Волгоград, 30-летия победы бульвар, <br />
-								21 ТЦ Парк Хаус, 3-й этаж
+								Волгоград, 30-летия победы бульвар, 21 <br />
+								ТЦ Парк Хаус, 3-й этаж
 							</div>
 						</div>
 						<div class="location__item item-location">
@@ -112,15 +130,15 @@
 								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84146.20930816415!2d44.7441101!3d48.7710257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41054c60c3625963%3A0x65a5848172dd6916!2z0KLQoNCaINCf0LvQsNC90LXRgtCw0JvQtdGC0L4!5e0!3m2!1sru!2sru!4v1713968096837!5m2!1sru!2sru" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
 							<div class="item-location__descr">
-								Волжский, Профсоюзов бульвар, <br />
-								1-Б ТЦ ПланетаЛета, 3-й этаж
+								Волжский, Профсоюзов бульвар, 1-Б <br />
+								ТЦ ПланетаЛета, 3-й этаж
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<div class="footer__logo">
 				<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="img" /></picture>
 			</div>
@@ -140,7 +158,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20240424180119"></script>
+	<script src="js/app.min.js?_v=20240424200030"></script>
 </body>
 
 </html>
